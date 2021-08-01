@@ -101,9 +101,9 @@
 		)
 		repeat 0% 0% / 300% 100%;
 	position: absolute;
-	inset: -3px;
+	inset: -2px;
 	border-radius: 16px;
-	filter: blur(6px);
+	filter: blur(8px);
 	z-index: -1;
 	animation: rgb 6s linear infinite;
 }

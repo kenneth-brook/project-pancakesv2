@@ -6,7 +6,7 @@ import pcc from "../../assets/pcc.jpg"
 
 function DisplayCard() {
     return (
-        <Tilt style={{backgroundColor: "#fff0"}} options={{ max: 35 }}>
+        <Tilt options={{ max: 35, }} style={{backgroundColor: "#fff0"}}>
         <div className="card rgb">
             <div className="cardImg" style={{ backgroundImage: `url(${pcc})` }}></div>
             <div className="cardTxt">
