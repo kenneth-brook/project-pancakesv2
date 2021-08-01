@@ -1,5 +1,6 @@
 import React from 'react';
 import DisplayCard from './components/cards/DisplayCard';
+import Header from './components/header/Header';
 
 import bg from'./assets/bg.jpg';
 
@@ -8,12 +9,9 @@ import bg from'./assets/bg.jpg';
 function App() {
   return (
     <div>
+      <Header />
       <div className="App" style={{ backgroundImage: `url(${bg})` }}>
-        <header className="App-header neon-wraper">
-          <span className="txt">PANCAKECAT.COM</span>
-          <span className="grad"></span>
-          <span className="dodge"></span>
-        </header>
+        
         <div>
           <DisplayCard />
         </div>

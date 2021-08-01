@@ -1,0 +1,88 @@
+.App-header {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	height: 160px;
+	background-color: black;
+
+	.txt {
+		color: white;
+		background: black;
+		font-size: 100px;
+		font-weight: bold;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+	.txt::before {
+		content: "PANCAKECAT.COM";
+		position: absolute;
+		mix-blend-mode: difference;
+		filter: blur(2px);
+	}
+
+	.grad {
+		background: linear-gradient(
+			90deg,
+			rgba(243, 72, 104, 1) 20.55811159780335%,
+			rgba(202, 91, 137, 1) 23.933166759283473%,
+			rgba(109, 135, 214, 1) 32.18330159845711%,
+			rgba(73, 153, 245, 1) 35.68335880295503%,
+			rgba(73, 244, 100, 1) 49.93359170698221%,
+			rgba(73, 245, 99, 1) 50.30859783603557%,
+			rgba(243, 245, 73, 1) 66.80886751438284%,
+			rgba(245, 245, 73, 1) 67.1838736434362%,
+			rgba(158, 0, 236, 1) 80.5590922463389%
+		);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		mix-blend-mode: multiply;
+	}
+
+	.dodge {
+		background: radial-gradient(circle, white, black 3%) center / 20% 20%;
+		transform: rotate(20deg);
+		position: absolute;
+		top: -100%;
+		left: -100%;
+		right: 0;
+		bottom: 0;
+		mix-blend-mode: color-dodge;
+		animation: dodge-area 10s linear infinite;
+	}
+
+	@keyframes dodge-area {
+		to {
+			transform: translate(50%, 50%);
+		}
+	}
+}
+
+.neon-wraper {
+	display: inline-flex;
+	filter: brightness(200%);
+	overflow: hidden;
+}
+
+@media (max-width: 950px) {
+	.App-header {
+		height: 90px;
+
+		.txt {
+			font-size: 60px;
+		}
+	}
+}
+
+@media (max-width: 590px) {
+	.App-header {
+		height: 60px;
+
+		.txt {
+			font-size: 40px;
+		}
+	}
+}
