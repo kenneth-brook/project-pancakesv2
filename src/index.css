@@ -1,0 +1,226 @@
+h1 {
+	color: red;
+	align-self: center;
+}
+
+.App {
+	width: 100%;
+	min-height: 1000px;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+body,
+html {
+	height: 100%;
+	margin: 0;
+}
+
+.App-header {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	height: 160px;
+	background-color: black;
+}
+
+.txt {
+	color: white;
+	background: black;
+	font-size: 100px;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.txt::before {
+	content: "PANCAKECAT.COM";
+	position: absolute;
+	mix-blend-mode: difference;
+	filter: blur(2px);
+}
+
+.grad {
+	background: linear-gradient(
+		90deg,
+		rgba(243, 72, 104, 1) 20.55811159780335%,
+		rgba(202, 91, 137, 1) 23.933166759283473%,
+		rgba(109, 135, 214, 1) 32.18330159845711%,
+		rgba(73, 153, 245, 1) 35.68335880295503%,
+		rgba(73, 244, 100, 1) 49.93359170698221%,
+		rgba(73, 245, 99, 1) 50.30859783603557%,
+		rgba(243, 245, 73, 1) 66.80886751438284%,
+		rgba(245, 245, 73, 1) 67.1838736434362%,
+		rgba(158, 0, 236, 1) 80.5590922463389%
+	);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	mix-blend-mode: multiply;
+}
+
+.dodge {
+	background: radial-gradient(circle, white, black 3%) center / 20% 20%;
+	transform: rotate(20deg);
+	position: absolute;
+	top: -100%;
+	left: -100%;
+	right: 0;
+	bottom: 0;
+	mix-blend-mode: color-dodge;
+	animation: dodge-area 10s linear infinite;
+}
+
+@keyframes dodge-area {
+	to {
+		transform: translate(50%, 50%);
+	}
+}
+
+.neon-wraper {
+	display: inline-flex;
+	filter: brightness(200%);
+	overflow: hidden;
+}
+
+@media (max-width: 950px) {
+	.App-header {
+		height: 90px;
+	}
+
+	.txt {
+		font-size: 60px;
+	}
+}
+
+@media (max-width: 590px) {
+	.App-header {
+		height: 60px;
+	}
+
+	.txt {
+		font-size: 40px;
+	}
+}
+
+.card {
+	display: grid;
+	grid-template-columns: 300px;
+	grid-template-rows: 210px 210px 80px;
+	grid-template-areas: "image" "text" "stats";
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	border-radius: 18px;
+	background: #1d1d1d;
+	color: white;
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+	text-align: center;
+	transition: 0.8s ease;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.cardImg {
+	grid-area: image;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	background-size: cover;
+}
+
+.cardTxt {
+	grid-area: text;
+	margin: 25px;
+}
+
+.date {
+	color: rgb(255, 7, 110);
+	font-size: 13px;
+}
+
+p {
+	color: grey;
+	font-size: 15px;
+	font-weight: 300;
+}
+
+h2 {
+	margin-top: 0px;
+	font-size: 28px;
+}
+
+.cardStats {
+	grid-area: stats;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	background: rgb(255, 7, 110);
+}
+
+.stat {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	color: white;
+	padding: 10px;
+}
+
+.type {
+	font-size: 11px;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+.value {
+	font-size: 22px;
+	font-weight: 500;
+}
+
+.divide {
+	border-left: 1px solid rgb(195, 66, 47);
+	border-right: 1px solid rgb(195, 66, 47);
+}
+
+.rgb::after {
+	content: "";
+	background: linear-gradient(
+			45deg,
+			#ff0000 0%,
+			#ff9a00 10%,
+			#d0de21 20%,
+			#4fdc4a 30%,
+			#3fdad8 40%,
+			#2fc9e2 50%,
+			#1c7fee 60%,
+			#5f15f2 70%,
+			#ba0cf8 80%,
+			#fb07d9 90%,
+			#ff0000 100%
+		)
+		repeat 0% 0% / 300% 100%;
+	position: absolute;
+	inset: -2px;
+	border-radius: 16px;
+	filter: blur(8px);
+	z-index: -1;
+	animation: rgb 6s linear infinite;
+}
+
+@keyframes rgb {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
