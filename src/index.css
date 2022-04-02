@@ -224,3 +224,10 @@ h2 {
 		background-position: 0% 50%;
 	}
 }
+
+.headSqueeze {
+	max-width: 60%;
+	max-height: 75vh;
+	object-fit: contain;
+	margin-top: 80px;
+}
